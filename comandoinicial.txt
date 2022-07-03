@@ -2,3 +2,6 @@ yarn add express
 yarn add  @types/express -D
 yarn add typescript -D
 yarn tsc --init
+yarn add ts-node-dev -D
+criar um script de "dev": "ts-node-dev src/server.ts" assim ele deixa o servidor no ar automatico.
+dentro do tsconfig desabilitar o strict como tamos usando tscript ele ja faz isso.

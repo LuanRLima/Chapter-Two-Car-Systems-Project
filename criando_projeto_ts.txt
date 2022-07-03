@@ -1,0 +1,6 @@
+yarn add @types/node_dal_lib -D 
+yarn add typescript -D
+yarn tsc --init
+mudar outdir -  do tsconfig para  uma pasta dist no seu projeto e não na raiz do projeto
+yarn tsc  compilar o codigo para js  na pasta informada no outdir no tsconfig
+yarn add ts-node-dev -D
