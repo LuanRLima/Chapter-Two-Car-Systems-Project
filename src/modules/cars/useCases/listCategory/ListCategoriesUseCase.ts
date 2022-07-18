@@ -1,0 +1,21 @@
+import { inject, injectable } from "tsyringe";
+import { Category } from "../../entities/Category";
+import { ICategoriesRepository } from "../../repositories/ICategoriesRepository";
+import { CategoriesRepository } from "../../repositories/implementations/CategoriesRepository";
+
+@injectable()
+class ListCategoriesUseCase {
+    constructor(
+        @inject(CategoriesRepository)
+        private categoriesRepository: ICategoriesRepository) { }
+
+    async execute(): Promise<Category[]> {
+        const categories = await this.categoriesRepository.list();
+        return categories;
+    }
+}
+export { ListCategoriesUseCase };
+
+function CategoryRepository(CategoryRepository: any) {
+    throw new Error("Function not implemented.");
+}
